@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Agreore</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="description" content="Agregore - What is it, Why is it.">
+
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif', Arial; }
+      text { font-family: 'Droid Serif', Arial !important; }
+
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      li {
+        font-size: 2em;
+      }
+
+      .datbg {
+        background: #2aca4b;
+        color: #fff;
+      }
+      .beakerbg {
+        background: #5743ff;
+        color: #fff;
+      }
+      .purplebg {
+        background: #ae40ca;
+        color: #fff;
+      }
+
+      .bgimage {
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .bgimage h1 {
+        background: rgba(255, 255, 255, 0.7);
+        padding: 0.5em;
+      }
+      .eye {
+        background-image: url('/RangerMauve.svg');
+      }
+      img {
+        width: 80vmin;
+        height: 80vmin;
+        object-fit: contain;
+        text-align: center;
+      }
+      code {
+        text-align: left;
+      }
+      a:link, a:visited { color: inherit; }
+
+      .remark-container {
+        background: #FAFAFA;
+      }
+
+      /* For mermaid stuff */
+      .mermaid .actor {
+        stroke: none !important;
+      }
+      .mermaid rect.actor {
+        fill: #2aca4b !important;
+      }
+
+      .mermaid text.actor {
+        fill: #FFF !important;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Agregore
+
+<small>Press <b>P</b> for speaker notes</small>
+
+---
+
+class: center, middle, purplebg
+
+# @RangerMauve
+
+"Mauve"
+
+Mauve Software Inc.
+
+---
+
+class: center, middle
+
+![Dat Logo Here](dat-logo.png)
+
+???
+
+---
+
+class: center, middle
+
+<div class="mermaid" title="Mermaid example">
+  sequenceDiagram
+    participant Browser
+</div>
+
+???
+
+---
+
+class: center, middle, purplebg
+
+# 🔥 🙇‍ Thank you! 🙇‍ 🔥
+
+    </textarea>
+    <script src="./remark-latest.min.js"></script>
+    <script src="./mermaid.js"></script>
+    <script>
+    window.onload = function(){
+      var slideshow = remark.create();
+
+      slideshow.on("afterShowSlide", s => {
+        const [slide] = document.getElementsByClassName("remark-visible");
+        mermaid.init(Array.from(slide.getElementsByClassName("mermaid")));
+      });
+    };
+    </script>
+  </body>
+</html>
